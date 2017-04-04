@@ -2051,8 +2051,8 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     // BIP148 mandatory segwit signalling.
     int64_t nMedianTimePast = pindex->GetMedianTimePast();
-    if ( (nMedianTimePast >= 1506816000) &&   // Sun Oct 1 00:00:00 UTC 2017
-         (nMedianTimePast <= 1510704000) &&   // Sun Nov 15 00:00:00 UTC 2017
+    if ( (nMedianTimePast >= 1501545600) &&   // Tue 1 Aug 2017 00:00:00 UTC
+         (nMedianTimePast <= 1510704000) &&   // Wed 15 Nov 2017 00:00:00 UTC
          (!IsWitnessEnabled(pindex->pprev, chainparams.GetConsensus())) )  // Segwit is not active
     {
         bool fVersionBits = (pindex->nVersion & VERSIONBITS_TOP_MASK) == VERSIONBITS_TOP_BITS; // BIP9 bit set
